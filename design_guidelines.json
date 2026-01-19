@@ -1,0 +1,130 @@
+{
+  "identity": {
+    "name": "AgriScan AI",
+    "persona": "The Digital Herbarium",
+    "concept": "A fusion of 19th-century botanical illustration aesthetics with 21st-century precision diagnostics. It feels like a high-tech lab notebook used in the field.",
+    "emotional_tone": "Scientific, Trustworthy, Organic, Precise",
+    "design_principles": [
+      "Fusion: Botanical Serifs + Data Mono",
+      "Tactile: Paper textures vs. Glass overlays",
+      "Density: High-density data displays (Control Room)",
+      "Contrast: Deep Earth Greens vs. Electric Signal Colors"
+    ]
+  },
+  "typography": {
+    "primary_font": "Playfair Display",
+    "secondary_font": "Manrope",
+    "mono_font": "JetBrains Mono",
+    "usage": {
+      "headings": "Playfair Display, font-weight: 600, tracking-tight",
+      "body": "Manrope, font-weight: 400, leading-relaxed",
+      "labels": "JetBrains Mono, uppercase, tracking-widest, text-xs",
+      "data": "Manrope, font-variant-numeric: tabular-nums"
+    },
+    "installation": "Import via Google Fonts in index.css: @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Manrope:wght@400;500;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');"
+  },
+  "colors": {
+    "palette": {
+      "primary": {
+        "name": "Deep Jungle",
+        "hex": "#1A3C34",
+        "tailwind": "bg-[#1A3C34] text-white"
+      },
+      "secondary": {
+        "name": "Clay",
+        "hex": "#E07A5F",
+        "tailwind": "bg-[#E07A5F] text-white"
+      },
+      "accent": {
+        "name": "Bio-Electric",
+        "hex": "#D4FF32",
+        "tailwind": "bg-[#D4FF32] text-[#1A3C34]"
+      },
+      "background": {
+        "name": "Rice Paper",
+        "hex": "#F4F5F0",
+        "tailwind": "bg-[#F4F5F0]"
+      },
+      "surface": {
+        "name": "Clean White",
+        "hex": "#FFFFFF",
+        "tailwind": "bg-white"
+      },
+      "text": {
+        "primary": "#1A3C34",
+        "secondary": "#5C6B66",
+        "muted": "#8D9995"
+      }
+    },
+    "gradients": {
+      "hero": "bg-gradient-to-br from-[#1A3C34] to-[#0F231E]",
+      "glass": "bg-white/70 backdrop-blur-xl border border-white/20"
+    }
+  },
+  "layout_strategies": {
+    "landing_page": {
+      "grid_type": "Tetris Grid",
+      "structure": "grid-cols-1 md:grid-cols-12 gap-4 p-4 md:p-8",
+      "rules": "Asymmetrical layout. Hero image spans 8 cols, text spans 4. Use negative space."
+    },
+    "dashboard": {
+      "grid_type": "Control Room",
+      "structure": "grid-cols-1 md:grid-cols-4 gap-4 p-4",
+      "rules": "Dense information. No wasted space. Widgets stretch to fill height."
+    }
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-[#1A3C34] text-white hover:bg-[#1A3C34]/90 rounded-none border-b-2 border-[#D4FF32] px-8 py-3 font-mono text-sm uppercase tracking-wider transition-all active:translate-y-1",
+      "secondary": "bg-transparent border border-[#1A3C34] text-[#1A3C34] hover:bg-[#1A3C34] hover:text-white rounded-none px-8 py-3 font-mono text-sm uppercase tracking-wider transition-all"
+    },
+    "cards": {
+      "style": "bg-white border border-[#1A3C34]/10 shadow-[4px_4px_0px_0px_rgba(26,60,52,0.1)] rounded-sm p-6",
+      "hover": "hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_0px_rgba(26,60,52,0.15)] transition-all duration-300"
+    },
+    "inputs": {
+      "style": "bg-[#F4F5F0] border-b-2 border-[#1A3C34]/20 focus:border-[#1A3C34] rounded-none px-4 py-3 outline-none transition-colors font-mono text-sm"
+    },
+    "upload_zone": {
+      "style": "border-2 border-dashed border-[#1A3C34]/30 bg-[#1A3C34]/5 hover:bg-[#1A3C34]/10 transition-colors rounded-lg p-12 flex flex-col items-center justify-center gap-4 cursor-pointer relative overflow-hidden",
+      "active": "border-[#D4FF32] bg-[#D4FF32]/10"
+    }
+  },
+  "visual_assets": {
+    "images": [
+      {
+        "category": "hero_background",
+        "url": "https://images.pexels.com/photos/35494628/pexels-photo-35494628.jpeg",
+        "description": "Abstract macro shot of green leaf veins, used for hero section background or overlay."
+      },
+      {
+        "category": "feature_farmer",
+        "url": "https://images.pexels.com/photos/7125679/pexels-photo-7125679.jpeg",
+        "description": "Farmer using a tablet in the field, used for the 'How it Works' or 'For Professionals' section."
+      },
+      {
+        "category": "texture_leaf",
+        "url": "https://images.pexels.com/photos/4113898/pexels-photo-4113898.jpeg",
+        "description": "Detailed leaf texture for card backgrounds or subtle overlays."
+      }
+    ],
+    "icons": "Use Lucide React. Preferred icons: Leaf, Scan, Activity, Sprout, Microscope, ClipboardCheck."
+  },
+  "motion": {
+    "library": "framer-motion",
+    "installation": "npm install framer-motion",
+    "guidelines": {
+      "page_transition": "initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} transition={{ duration: 0.4, ease: 'easeOut' }}",
+      "hover_lift": "whileHover={{ y: -4 }} transition={{ type: 'spring', stiffness: 300 }}",
+      "stagger": "variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.1 } } }}"
+    }
+  },
+  "universal_guidelines": [
+    "Do not use generic 'success green' (#22c55e). Use the brand 'Bio-Electric' (#D4FF32) or 'Deep Jungle' (#1A3C34) for success states.",
+    "Avoid rounded-xl or rounded-2xl. Stick to rounded-sm or rounded-md for a more technical, precise feel.",
+    "Use 'JetBrains Mono' for all data points, dates, and confidence scores.",
+    "Always add a 'specimen tag' visual element to result cards (e.g., a small border-l-4 with a serial number).",
+    "Ensure high contrast for outdoor visibility. Text on white must be #1A3C34, not gray."
+  ],
+  "instructions_to_main_agent": "You are building the 'AgriScan AI' interface. Follow the 'Digital Herbarium' aesthetic. Use the provided image URLs for the landing page. Implement the 'Control Room' grid for the dashboard. Use Shadcn components but override their styles to match the 'buttons' and 'inputs' styles defined above. Install 'framer-motion' and use it for page transitions."
+}

@@ -1,0 +1,50 @@
+.App {
+  min-height: 100vh;
+}
+
+.App-header {
+  background: linear-gradient(135deg, #1a3c34 0%, #0f231e 100%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #d4ff32;
+}
+
+.upload-zone:hover {
+  border-color: #d4ff32;
+  background-color: rgba(212, 255, 50, 0.05);
+}
+
+.drag-over {
+  border-color: #d4ff32 !important;
+  background-color: rgba(212, 255, 50, 0.1) !important;
+}
+
+.result-card {
+  box-shadow: 4px 4px 0px 0px rgba(26, 60, 52, 0.1);
+  transition: all 0.3s ease;
+}
+
+.result-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 6px 6px 0px 0px rgba(26, 60, 52, 0.15);
+}
+
+.confidence-bar {
+  background: linear-gradient(90deg, #1a3c34 0%, #e07a5f 50%, #d4ff32 100%);
+  height: 8px;
+  border-radius: 4px;
+  transition: width 0.5s ease;
+}
+
+.specimen-tag {
+  border-left: 4px solid #d4ff32;
+  padding-left: 1rem;
+}
