@@ -1,3 +1,6 @@
+# 🌱 AgriScan AI – Smart Plant Disease Detection System
+
+
 ## 👥 Team & Contributions
 
 ### Shresth Raj
